@@ -83,14 +83,50 @@
         </div>
         
       </div> -->
+      <!-- Current weather app -->
+      <!-- <div class="col">
+        <div class="card shadow-sm">
+            <a href="https://www.getyourguide.com/wales-l624/"><img class="cityImages" src="https://i2-prod.walesonline.co.uk/incoming/article26416092.ece/ALTERNATES/s615/0_MWL_LC_080323_Llanberis-Snowdonia-FOR-EDITORIAL-USE-WITH-THIS-STORY-ONLY-02.png" width="100%" height="225" alt="Wales attractions"></a>
+          <div class="card-body">
+            <p class="card-text">Cardiff</p>
+            <p class="card-text2">Click the image to discover more of what Wales has to offer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
 
 <div class="bigHeader">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <img src="./images/london.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-        </div>
+          <div class="weather" width="700" height="500">
+              <img src="./images/cloud.svg"  class="weather-icon">
+              <!-- weather APP -->
+              <h1 class="temp">15°c</h1>
+              <h2 class="city">London</h2>
+              <div class="details">
+                  <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moisture" viewBox="0 0 16 16">
+                      <path d="M13.5 0a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V7.5h-1.5a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V15h-1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5h-2zM7 1.5l.364-.343a.5.5 0 0 0-.728 0l-.002.002-.006.007-.022.023-.08.088a28.458 28.458 0 0 0-1.274 1.517c-.769.983-1.714 2.325-2.385 3.727C2.368 7.564 2 8.682 2 9.733 2 12.614 4.212 15 7 15s5-2.386 5-5.267c0-1.05-.368-2.169-.867-3.212-.671-1.402-1.616-2.744-2.385-3.727a28.458 28.458 0 0 0-1.354-1.605l-.022-.023-.006-.007-.002-.001L7 1.5zm0 0-.364-.343L7 1.5zm-.016.766L7 2.247l.016.019c.24.274.572.667.944 1.144.611.781 1.32 1.776 1.901 2.827H4.14c.58-1.051 1.29-2.046 1.9-2.827.373-.477.706-.87.945-1.144zM3 9.733c0-.755.244-1.612.638-2.496h6.724c.395.884.638 1.741.638 2.496C11 12.117 9.182 14 7 14s-4-1.883-4-4.267z"/>
+                    </svg>
+                      <!-- <img src="images/humidity.png" alt=""> -->
+                  </div>
+                  <p class="humidity">50%</p>
+                  <p>Humidity</p>
+                  <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                      <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                      <!-- <img src="images/wind.png" alt=""> -->
+                  </div>
+                  <p class="wind">50km/h</p>
+                  <p>Wind-Speed</p>
+              </div>
+          </div>
+        </div> 
         <div class="col-lg-6">
-            
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Experience UK</h1>
           <p class="lead">Rich in heritage and history, the United Kingdom offers a delightful mix of bustling modern cities and charming ancient villages to explore.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -99,8 +135,12 @@
         </div>
       </div>
     </div>
-
-      
+     <!-- end of weather app -->
+    
+    <br><br><br><br>
+    <img src="./images/london.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+  
+  
 
       <!-- <section class="py-5 text-center container">
         <div class="row py-lg-5">
@@ -341,6 +381,65 @@
     Check weather for your Destination
 </a> -->
     <!-- </div> -->
+
+    <!-- jyhoti api -->
+  <script>
+      const apiKey="90e4fa4300d270a86d778a63324ef0a3";
+      const apiUrl="https://api.openweathermap.org/data/2.5/weather?&units=metric&q="
+      const searchBox=document.querySelector(".search input");
+      const searchBtn=document.querySelector(".search button");
+      const weatherIcon=document.querySelector(".weather-icon");
+      async function checkWeather(city){
+      const response= await fetch(apiUrl+ city +`&appid=${apiKey}`);
+      if(response.status == 404){
+          document.querySelector(".error").style.display = "block";
+          document.querySelector(".weather").style.display = "none";
+      }
+      else{
+      var data= await response.json();
+      document.querySelector(".city").innerHTML=data.name;
+      document.querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°c";
+      document.querySelector(".humidity").innerHTML=data.main.humidity+ "%";
+      document.querySelector(".wind").innerHTML=data.wind.speed + "km/h" ;
+if(data.weather[0].main == "Clouds"){
+  weatherIcon.src="./images/cloud-fill.svg";
+  // weatherIcon.src="images/clouds.png";
+}
+else if(data.weather[0].main == "Clear"){
+  weatherIcon.src="./images/brightness-high-fill.svg";
+  // weatherIcon.src="images/clear.png";
+}
+else    if(data.weather[0].main == "Rain"){
+  weatherIcon.src="./images/cloud-rain-fill.svg";
+  // weatherIcon.src="images/rain3.png";
+}
+else if(data.weather[0].main == "Drizzle"){
+  weatherIcon.src="./images/cloud-drizzle-fill.svg";
+  // weatherIcon.src="images/drizzle.png";
+}
+else if(data.weather[0].main == "Mist"){
+  weatherIcon.src="./images/cloud-sleet-fill.svg";
+  // weatherIcon.src="images/mist.png";
+}
+document.querySelector(".weather").style.display = "block";
+document.querySelector(".error").style.display = "none";
+      }
+  }
+  // modified code so that it shows the current weather of london as default once the page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    checkWeather("London");
+  });
+  searchBtn.addEventListener("click",()=>{
+      checkWeather(searchBox.value);
+  })
+  
+  </script>
+
+<img src="./images/cloud-fill.svg" alt="">
+
+
+
+    <!--  -->
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">

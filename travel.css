@@ -68,7 +68,7 @@ h1.fw-light {
     
 }
 h2 {
-    color: #E6E5A3;
+    color: #557153;
     text-align: center;
     font-size: 3rem;
 }
@@ -233,3 +233,234 @@ ul.nav {
     color: white;
 
 }
+
+/* jyhoti work*/
+
+/* .navbar  {
+    width:100%;
+    height:80px;
+    background-color: #fee;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    color: #000;
+}
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+.menu ul li a{
+    text-decoration: none;
+    color:#000;
+    padding: 5px 12px;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.menu ul li a:hover{
+    border-bottom: 4px solid #000;
+    transition:0.4s;
+}
+.signup a{
+    text-decoration:none;
+     color:#000;
+     font-size: 18px;
+     font-weight: bold;
+     border-radius: 12px;
+     padding:12px 30px ;
+     border: 2px solid #FF0000;
+}
+.signup a:hover{
+    transition: 0.4s;
+    background-color: red;
+}
+h1 {
+    color: black;
+        display: flex;
+        justify-content: center;
+}
+img {
+    width:150px;
+    height: 200px;
+}
+.tours  {
+    width:70%;
+    display:flex;
+    justify-content: space-around;
+}
+.body  {
+    width:100%;
+    height:50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(images/nature4.jpg);
+    background-position:center;
+    background-size: cover;
+}
+.places  {
+    display: inline;
+    text-align: center;
+    border-radius: 12px;
+}
+.places h2  {
+    color: red;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border-radius: 1px;
+    padding: 20px 20px;
+    background-color: black;
+}
+.heading h1 {
+    font-size: 40px;
+}
+.heading a{
+    text-decoration: none;
+    color:black;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 45px;
+    padding: 14px 50px;
+    background-color: #fff;
+}
+body {
+    background-image: url('images/nature4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.check-weather-button {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 2px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+.check-weather-button:hover {
+    background-color: #00692D;
+} */
+/* 9:44
+.body  {
+    background-color: #222;
+} */
+
+/* div.card {
+    width: 700px; 
+    height: 300px;
+
+} */
+/* .card  {
+    width:90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #4E695C, #5B548A);
+    color: #4E695C;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 30px;
+    padding: 20px 15px;
+    text-align: center;
+     
+} */
+
+/* div.card {
+    background-color: #4E695C;  
+}
+.search  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #EBFFFC;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #EBFFFC;
+    border-radius: 50%;
+    width: 60px;
+    height:60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 16px;
+}
+.weather-icon {
+    width:170px;
+    margin-top: 30px;
+}
+.weather img{
+    margin-top: 20px;
+    width:200px;
+    height:80px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    text-align: left;
+    align-items:center;
+}
+.col img{
+    width: 60px;
+    margin-right: 20px;
+}
+.humidity,.wind{
+    font-size: 20px;
+    margin-right: 10px;
+} */
+
+/* .weather{
+    display: none;  */
+    /* border: 5px solid #4E695C;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+    width: 500px; */
+     
+/* } */
+
+/* .details {
+     border: 5px solid #4E695C;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+    width: 500px;
+
+}  */
+
+/* .error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top:10px;
+    display: none;
+} */
